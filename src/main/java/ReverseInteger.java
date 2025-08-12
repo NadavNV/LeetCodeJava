@@ -1,11 +1,12 @@
 public class ReverseInteger {
     public int reverse(int x) {
+        if (x == 0) return 0;
         int sign = x / Math.abs(x);
         int result = 0;
         x = Math.abs(x);
         while (x > 0) {
-            int digit = x / 10;
-            x %= 10;
+            int digit = x % 10;
+            x /= 10;
             if (sign > 0) {
                 if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && digit > 7)) {
                     return 0;
