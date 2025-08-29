@@ -6,11 +6,7 @@ public class WildcardMatching {
         for (int i = n; i >= 0; i--) {
             for (int j = m; j >= 0; j--) {
                 if (j == m) {
-                    if (i == n) {
-                        isMatch[i][j] = true;
-                    } else {
-                        isMatch[i][j] = false;
-                    }
+                    isMatch[i][j] = i == n;
                 } else {
                     if (i < n && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
                         isMatch[i][j] = isMatch[i + 1][j + 1];
