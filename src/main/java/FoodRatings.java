@@ -24,9 +24,9 @@ class Food implements Comparable<Food> {
 
 
 class FoodRatings {
-    private Map<String, Integer> foodToRatings;
-    private Map<String, String> foodToCuisine;
-    private Map<String, PriorityQueue<Food>> cuisineToFood;
+    private final Map<String, Integer> foodToRatings;
+    private final Map<String, String> foodToCuisine;
+    private final Map<String, PriorityQueue<Food>> cuisineToFood;
 
     public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
         foodToCuisine = new HashMap<>();
